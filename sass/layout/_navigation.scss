@@ -1,0 +1,32 @@
+/*nav
+{
+    display: flex;
+}*/
+.nav-place
+{
+    display: flex;
+    justify-content: space-between;
+}
+.nav-bar ul
+{
+    margin: 1em 5em 1em 5em;
+    display: flex;
+    li
+    {
+        padding: 1em;
+        margin-left: 1em;
+        font-weight: bold;
+        transition: width .3s;
+        color: black;
+        border: 2px solid;
+        border-radius: 15%;
+        &:hover
+        {
+            background-color: #000;
+            color: #FFFFFF;
+        }
+    }
+}
+
+
+
