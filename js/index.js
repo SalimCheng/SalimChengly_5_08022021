@@ -1,26 +1,23 @@
-var xhr = new XMLHttpRequest();
+const url = "http://localhost:3000/api/cameras";
 
-var produits = document.getElementById("produits")
+fetch(url)
+    .then(response => response.json())
+    .then(response => {
+        console.log(response);
+        response.forEach(element => {
 
-xhr.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        console.warn("Tout va bien !")
-        var reponse = JSON.parse(this.responseText)
-        reponse.forEach(element => {
-            // console.log(element.name)
             var prod = document.createElement("div");
             prod.setAttribute("class", "produit")
-            produits.append(prod);
+            products.append(prod);
+
 
             var nom = document.createElement("h2");
             nom.innerHTML = element.name
             nom.setAttribute("class", "cam_title")
-            prod.append(nom)
+            prod.append(nom)            
             
             
-            
-            
-            var imageUrl = document.createElement("img");
+           var imageUrl = document.createElement("img");
            imageUrl.setAttribute('class', "cam_img");
            imageUrl.src = element.imageUrl
            prod.append(imageUrl) 
@@ -29,16 +26,17 @@ xhr.onreadystatechange = function() {
            price.innerHTML = element.price
            price.setAttribute("class", "cam_price");
            prod.append(price);
+           price.textContent = (parseInt(element.price, 10) / 100) + ",00 €";
 
            var description = document.createElement("des")
            description.innerHTML = element.description
            prod.append(description);
 
-            
-        })
-        console.info(reponse)
-    }
-};
+           var lien = document.createElement("p")
+           lien.innerHTML = "<a href='products.html?id="+element._id+"'>Voir le produit</a>";
+           prod.append(lien)
 
-xhr.open("GET", "http://localhost:3000/api/cameras/", true);
-xhr.send();
+
+        });
+    })
+    .catch(error => alert("Erreur :" + error));

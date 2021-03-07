@@ -371,7 +371,7 @@ footer {
 
 footer h4 {
   color: black;
-  margin-top: 5em;
+  margin-top: 2em;
 }
 
 .nav-place {
@@ -431,12 +431,27 @@ footer h4 {
   color: #FFFFFF;
 }
 
-#cam-product img {
-  width: 15rem;
-  border-radius: 5% 5% 0 0;
+/*#cam-product
+{
+    img{
+        width: 15rem;
+        border-radius: 5% 5% 0 0;
+    }
+}*/
+.title {
+  margin-bottom: 2em;
+  font-weight: bold;
+  font-size: 1.25em;
 }
 
-#produits {
+.title_line {
+  margin-top: 1em;
+  height: 1px;
+  width: 30%;
+  background-color: #DFE1E6;
+}
+
+#products {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -497,7 +512,6 @@ body {
 
 body a {
   text-decoration: none;
-  color: white;
 }
 
 main {
