@@ -1,27 +1,43 @@
 .link_cam
 {
+    margin-top: 5px;
     background-color: white;
-    border: 1px solid #DFE1E6;
-    border-radius: 25%;
+    //border: 1px solid #DFE1E6;
+    border-radius: 32px;
     width: 11em; height: 2em;
     display: flex;
     justify-content: center;
     align-items: center;
-    a 
-    {
-        color: #2c2c54;
-        font-weight: bold;
-        &:visited
+    box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
+        6px 6px 10px rgba(0, 0, 0, 0.2);
+        a 
         {
-            color: brown;
+            color: #2c2c54;
+            font-weight: bold;
+            margin-right: 10px;
+            &:active
+            {
+                opacity: 1;
+                box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
+                  inset 8px 8px 16px rgba(0, 0, 0, 0.1);
+                color: #79e3b6;
         }
     }
     &:hover
     {
-        background-color: black;
-        a + i
-        {
-            color: white;
-        }
+       // opacity: 0.3;
+       box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8),
+          6px 6px 10px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05) translateZ(0px) translate3d(0px, 0px, 0px);
+        transition-duration: 300ms;
+        transition-property: transform, box-shadow;
+        transition-timing-function: ease-out;
+        background-color: #786fa6;
+        border: none;
+            a 
+              {
+                  color: white;
+              }
+      
     }
 }

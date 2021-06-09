@@ -2,11 +2,6 @@
 {
     display: flex;
 }*/
-.nav-place
-{
-    display: flex;
-    justify-content: space-between;
-}
 .nav_bar ul
 {
     margin: 1em 5em 1em 5em;
@@ -18,14 +13,28 @@
         font-weight: bold;
         transition: width .3s;
         color: black;
-        border: 2px solid;
+        border: 2px solid #786fa6;
         border-radius: 15%;
         &:hover
         {
-            background-color: #000;
+            background-color: #786fa6;
             color: #FFFFFF;
         }
     }
+}
+.shopping_bag::before
+{
+    content: '0';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #786fa6;
+    border-radius: 50%;
+    width: 0.8em; height: 0.8em;
+    position: absolute;
+    top: 3.3em; right: 5em;
+    color: black;
+    background-color: white;
 }
 
 

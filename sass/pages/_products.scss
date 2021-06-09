@@ -1,0 +1,44 @@
+.des_name
+{
+    font-size: 1.5em;
+}
+.des_list
+{
+    display: flex;
+    flex-direction: row;
+    margin: 2em;
+    align-items: space-around;
+}
+.container_text 
+{
+    height: 10em;
+    margin: 1em;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.des_img
+{
+    width: 50%;
+    border-radius: 14px;
+}
+.des_price
+{
+    font-weight: bolder;
+}
+.lenses
+{
+    margin: 1em 0 0.5em 0;
+    font-weight: bolder;
+}
+.des_title h3
+{
+    font-weight: bolder;
+    margin-bottom: 0.5em;
+}
+#lenses
+{
+    margin-bottom: 2em;
+}
